@@ -9,7 +9,15 @@ package Aritmetico;
  *
  * @author LN710Q
  */
-public interface Aritmetica  {
-    float operar(float a, float b);
-}
+public class Suma implements Aritmetica {
 
+    public Suma() {
+    }
+
+
+    @Override
+    public float operar(float a, float b) {
+        
+    }
+    
+}
