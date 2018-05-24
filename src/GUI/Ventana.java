@@ -18,21 +18,33 @@ import javax.swing.JTextField;
  */
 public class Ventana extends JPanel{
     
-    private int WIDTH=300, HEIGHT=300;
+    private int WIDTH=420, HEIGHT=200;
     private int widthTF=120, heightTF=30;
     private int widthBT=80, heightBT=30;
     JButton btn;
-
+    JButton btn1;
+    JButton btn2;
+    JButton btn3;
     JTextField textfield1, textfield2;
     
     public Ventana(){
-        btn = new JButton("sumar");
+        btn = new JButton("+");
         btn.setBounds(10, 100, widthBT, heightBT);
+        
+        btn1 = new JButton("-");
+        btn1.setBounds(100, 100, widthBT, heightBT);
+        
+        btn2 = new JButton("x");
+        btn2.setBounds(190, 100, 130, heightBT);
+        
+        btn3 = new JButton("/");
+        btn3.setBounds(330, 100, widthBT, heightBT);
         
         textfield1= new JTextField();
         textfield2= new JTextField();
-        textfield1.setBounds(100, 200, widthTF, heightTF);
-        textfield2.setBounds(100, 40, widthTF, heightTF);
+        textfield1.setBounds(150, 40, widthTF, heightTF);
+        textfield2.setBounds(150, 150, widthTF, heightTF);
+        textfield2.setText("hola");
         btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -44,6 +56,9 @@ public class Ventana extends JPanel{
         textfield2.setEnabled(false);
         
         add(btn);
+        add(btn1);
+        add(btn2);
+        add(btn3);
         add(textfield1);
         add(textfield2);
         
