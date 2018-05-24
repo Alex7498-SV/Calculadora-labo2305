@@ -11,7 +11,7 @@ import javax.swing.JFrame;
  *
  * @author LN710Q
  */
-public class Labo2305 {
+public class GUI {
 
     /**
      * @param args the command line arguments

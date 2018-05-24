@@ -10,6 +10,6 @@ package Conversor;
  * @author LN710Q
  */
 public interface Conversor{
-    int convertir ();
+    int convertir (int a);
     
 }

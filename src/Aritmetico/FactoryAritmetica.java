@@ -18,15 +18,16 @@ public class FactoryAritmetica implements AbstractFactory {
     public Aritmetica getop(int type) {
         switch (type) {
             case 1:
-                return new Suma(float a, float b);
+                return new Suma();
             case 2:
-                return new Resta(float a, float b);
+                return new Resta();
             case 3:
-                return new Multiplicacion(float a, float b);
+                return new Multiplicacion();
             case 4:
-                return new Division(float a, float b);
+                return new Division();
                 
-            
+            default:
+                return  null;
                 
         }
     }

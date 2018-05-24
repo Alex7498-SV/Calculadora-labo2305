@@ -10,13 +10,19 @@ package Aritmetico;
  * @author LN710Q
  */
 public class Suma implements Aritmetica {
-
+    float a, b, result;
+    
     public Suma() {
     }
 
-
     @Override
     public float operar(float a, float b) {
+        this.a = a;
+        this.b = b;
+        
+        result = (a + b);
+        
+        return result;
         
     }
     
