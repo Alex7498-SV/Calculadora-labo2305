@@ -11,9 +11,24 @@ package Conversor;
  * @author alex
  */
 public class binario implements Conversor{
-
+    int a;
+    
     @Override
-    public int convertir(int a) {
+    public String convertir(int a) {
+        this.a = a;
+        
+        String binres = "";
+        int res;
+     
+
+        while (a != 0) {
+
+            res = (a % 2);
+            binres = res + binres; 
+            a /= 2; 
+
+        }
+        return binres;
         
     }
     
