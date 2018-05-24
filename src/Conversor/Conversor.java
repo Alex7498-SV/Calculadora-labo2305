@@ -10,6 +10,5 @@ package Conversor;
  * @author LN710Q
  */
 public interface Conversor{
-    String convertir (int a);
-    
+    String convertir (int a); 
 }
