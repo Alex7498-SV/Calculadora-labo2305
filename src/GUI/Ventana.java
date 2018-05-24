@@ -12,6 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+
 /**
  *
  * @author LN710Q
@@ -20,7 +21,7 @@ public class Ventana extends JPanel{
     
     private int WIDTH=420, HEIGHT=200;
     private int widthTF=120, heightTF=30;
-    private int widthBT=80, heightBT=30;
+    private int widthBT=50, heightBT=50;
     JButton btn;
     JButton btn1;
     JButton btn2;
@@ -35,7 +36,7 @@ public class Ventana extends JPanel{
         btn1.setBounds(100, 100, widthBT, heightBT);
         
         btn2 = new JButton("x");
-        btn2.setBounds(190, 100, 130, heightBT);
+        btn2.setBounds(190, 100, widthBT, heightBT);
         
         btn3 = new JButton("/");
         btn3.setBounds(330, 100, widthBT, heightBT);
@@ -48,6 +49,7 @@ public class Ventana extends JPanel{
         btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                textfield1.getText();
                 textfield2.setText(textfield1.getText());
             }
         });
