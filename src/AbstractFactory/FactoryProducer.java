@@ -5,10 +5,22 @@
  */
 package AbstractFactory;
 
+import Aritmetico.FactoryAritmetica;
+import Conversor.FactoryConversor;
+
 /**
  *
  * @author alex
  */
 public class FactoryProducer {
-    
+    public static AbstractFactory getFactory(int a){
+        switch (a){
+            case 1:
+                return new FactoryAritmetica();
+            case 2:
+                return  new FactoryConversor();
+            default:
+                return null;
+        }
+    }
 }
