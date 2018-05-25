@@ -19,16 +19,13 @@ public class binario implements Conversor{
         
         String binres = "";
         int res;
-     
 
-        while (a != 0) {
-
+        while (a > 1) {
             res = (a % 2);
             binres = res + binres; 
-            a /= 2; 
-
+            a /= 2;
         }
-        return binres;
+        return a+binres;
         
     }
     

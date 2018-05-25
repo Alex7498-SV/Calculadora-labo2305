@@ -11,19 +11,18 @@ package Aritmetico;
  * @author alex
  */
 public class Division implements Aritmetica {
-    float a, b, result;
+    float result;
     
     public Division() {
     }
 
     @Override
-    public float operar(float a, float b) {
-        this.a = a;
-        this.b = b;
-        
-        result = (a /b);
-        
-        return result;
+    public String operar(float a, float b) {
+        if(b==0){
+            return "Guantelete de Infinito";
+        }
+        this.result = (a /b);
+        return Float.toString(this.result);
     }
 
 }

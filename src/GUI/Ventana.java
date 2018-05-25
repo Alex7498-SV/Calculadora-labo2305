@@ -13,13 +13,14 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-
+ 
 /**
  *
  * @author LN710Q
  */
 public class Ventana extends JPanel{
-    private int a = 0, b = 0, flagtip = 1, flagint = 0;
+    private int flagtip = 1, flagint = 0;
+    private float a = 0, b = 0;
     String aux = "";
     
     private int WIDTH=400, HEIGHT=200;
@@ -54,6 +55,8 @@ public class Ventana extends JPanel{
         conv = new JButton("conv");
         conv.setBounds(250, 100, 70, heightBT);
         
+
+       
 //      CREACION DE TEXTFIELDS
         textfield1= new JTextField();
         textfield2= new JTextField();
@@ -65,14 +68,15 @@ public class Ventana extends JPanel{
         result.setBounds(270, 40, widthTF, heightTF);
         result.setEditable(false);
         
-        
+        textfield2.setText("  segundo num");
+        result.setText("  Resultado");
         // ASIGNACION DE ACCION A BOTONES
         // BOTON SUMA
         suma.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 aux = textfield1.getText();
-                a = Integer.parseInt(aux);
+                a = Float.parseFloat(aux);
                 aux = "";
                 System.out.println(a);
                 textfield1.setEditable(false);
@@ -94,7 +98,7 @@ public class Ventana extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
                 aux = textfield1.getText();
-                a = Integer.parseInt(aux);
+                a = Float.parseFloat(aux);
                 aux = "";
                 System.out.println(a);
                 textfield1.setEditable(false);
@@ -116,7 +120,7 @@ public class Ventana extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
                 aux = textfield1.getText();
-                a = Integer.parseInt(aux);
+                a = Float.parseFloat(aux);
                 aux = "";
                 System.out.println(a);
                 textfield1.setEditable(false);
@@ -138,7 +142,7 @@ public class Ventana extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
                 aux = textfield1.getText();
-                a = Integer.parseInt(aux);
+                a = Float.parseFloat(aux);
                 aux = "";
                 System.out.println(a);
                 textfield1.setEditable(false);
@@ -155,11 +159,31 @@ public class Ventana extends JPanel{
                 System.out.println(flagint);
             }
         });
-        
+        //BOTON CONVERTIR
+        conv.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                aux = textfield1.getText();
+                int c = Integer.parseInt(aux);
+                flagtip = 2;
+                suma.setEnabled(false);
+                resta.setEnabled(false);
+                mult.setEnabled(false);
+                div.setEnabled(false);
+                conv.setEnabled(false);
+                igual.setEnabled(false);
+                String resultado = FactoryProducer.getFactory(flagtip).getconv(1).convertir(c);
+                result.setText(resultado);
+            }
+        });
+        //BOTON IGUAL
         igual.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //FactoryProducer.getFactory(flagtip).getop(flagint);
+                aux = textfield2.getText();
+                b = Float.parseFloat(aux);
+                String resultado = FactoryProducer.getFactory(flagtip).getop(flagint).operar(a, b);
+                result.setText(resultado);
             }
         });
 //        textfield1.setEditable(true);

@@ -11,20 +11,16 @@ package Aritmetico;
  * @author alex
  */
 public class Resta implements Aritmetica {
-    float a, b, result;
+    float result;
     
     public Resta() {
         
     }
 
     @Override
-    public float operar(float a, float b) {
-        this.a = a;
-        this.b = b;
-        
-        result = (a - b);
-        
-        return result;
+    public String operar(float a, float b) {
+        this.result = (a - b);
+        return Float.toString(this.result);
     }
 
 }

@@ -10,6 +10,6 @@ package Aritmetico;
  * @author LN710Q
  */
 public interface Aritmetica  {
-    float operar(float a, float b);
+    String operar(float a, float b);
 }
 

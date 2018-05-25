@@ -36,5 +36,6 @@ public class FactoryAritmetica implements AbstractFactory {
     public Conversor getconv(int type) {
         return null;
     }
-    
 }
+
+    
